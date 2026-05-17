@@ -108,6 +108,14 @@ local function setup_arduino_lsp()
 			return vim.fn.getcwd()
 		end,
 		handlers = {},
+		capabilities = {
+			textDocument = {
+				semanticTokens = vim.NIL,
+			},
+			workspace = {
+				semanticTokens = vim.NIL,
+			},
+		},
 	})
 end
 
